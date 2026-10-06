@@ -4,7 +4,7 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
-        <button type="submit" form="form-payfast" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <button type="submit" form="form-zibal" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
         <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a>
       </div>
       <h1><?php echo $heading_title; ?></h1>
@@ -36,14 +36,14 @@
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="zibal_merchant"><?php echo $entry_merchant_id; ?></label>
                 <div class="col-sm-10">
-                  <input name="zibal_merchant" type="text" placeholder="برای تست مقدار zibal را وارد کنید." value="<?php echo $zibal_merchant; ?>" class="form-control" style="direction:rtl;" />
+                  <input name="zibal_merchant" id="zibal_merchant" type="text" placeholder="<?php echo $help_merchant; ?>" value="<?php echo $zibal_merchant; ?>" class="form-control" style="direction:rtl;" />
                   <?php if ($error_merchant) { ?><div class="text-danger"><?php echo $error_merchant; ?></div><?php } ?>
                 </div>
               </div>
 <div class="form-group">
-                <label class="col-sm-2 control-label" for="zibal_direct">زیبال دایرکت (درگاه مستقیم)</label>
+                <label class="col-sm-2 control-label" for="zibal_direct"><?php echo $entry_zibal_direct; ?></label>
                 <div class="col-sm-10">
-                  <select name="zibal_direct" class="form-control">
+                  <select name="zibal_direct" id="zibal_direct" class="form-control">
                     <?php if ($zibal_direct=="yes") { ?>
                     <option value="yes" selected="selected"><?php echo $text_enabled; ?></option>
                     <option value="no"><?php echo $text_disabled; ?></option>
@@ -57,7 +57,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="zibal_order_status_id"><?php echo $entry_order_status; ?></label>
                 <div class="col-sm-10">
-                  <select name="zibal_order_status_id" class="form-control">
+                  <select name="zibal_order_status_id" id="zibal_order_status_id" class="form-control">
                     <?php foreach ($order_statuses as $order_status) { ?>
                     <?php if ($order_status['order_status_id'] == $zibal_order_status_id) { ?>
                     <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
@@ -71,7 +71,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="zibal_status"><?php echo $entry_status; ?></label>
                 <div class="col-sm-10">
-                  <select name="zibal_status" class="form-control">
+                  <select name="zibal_status" id="zibal_status" class="form-control">
                     <?php if ($zibal_status) { ?>
                     <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
                     <option value="0"><?php echo $text_disabled; ?></option>
@@ -85,7 +85,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="zibal_sort_order"><?php echo $entry_sort_order; ?></label>
                 <div class="col-sm-10">
-                  <input name="zibal_sort_order" type="text" value="<?php echo $zibal_sort_order; ?>" class="form-control" />
+                  <input name="zibal_sort_order" id="zibal_sort_order" type="text" value="<?php echo $zibal_sort_order; ?>" class="form-control" />
                 </div>
               </div>
               

@@ -1,44 +1,43 @@
 <?php
-
 // Heading
-$_['heading_title'] = 'Zibal Online Payment';
+$_['heading_title']             = 'Zibal Online Payment';
 
 // Text
-$_['text_basket'] = 'Shopping Cart';
-$_['text_checkout'] = 'Checkout';
-$_['text_transaction'] = 'Transaction No: ';
-$_['text_transaction_reference'] = 'شماره مرجع: ';
-$_['text_title'] 		 = 'Zibal Online Payment';
-$_['text_wait']  		 = 'لطفا صبر نمایید!';
-$_['text_connect'] 		 = 'در حال اتصال به درگاه زیبال!';
-$_['text_results']  	 = 'رسید زیبال : ';
-$_['text_order_no']  	 = 'خرید شماره: ';
+$_['text_title']                = 'Zibal Online Payment';
+$_['text_wait']                 = 'Please wait!';
+$_['text_connect']              = 'Connecting to the Zibal gateway!';
+$_['text_results']              = 'Zibal receipt: ';
+$_['text_order_no']             = 'Order No: ';
+
+// Order notes
+$_['text_note_paid']            = 'Zibal payment verified.';
+$_['text_note_track_id']        = 'Transaction ID (trackId): ';
+$_['text_note_paid_at']         = 'Paid at: ';
+$_['text_note_card_number']     = 'Card number: ';
+$_['text_note_ref_number']      = 'Reference number: ';
+$_['text_note_request_failed']  = 'Zibal: creating the transaction failed.';
+$_['text_note_verify_failed']   = 'Zibal: transaction failed or cancelled (verify response).';
+$_['text_note_inquiry_failed']  = 'Zibal: the follow-up inquiry did not confirm the transaction (inquiry response).';
+$_['text_note_mismatch']        = 'Zibal: amount or order ID in the response does not match the stored transaction.';
+$_['text_note_http_code']       = 'HTTP code: ';
+$_['text_note_response']        = 'Response received:';
+$_['text_note_no_response']     = 'No response received. cURL error: ';
+$_['text_note_currency']        = 'Zibal: only orders in Rial or Toman can be paid. Order currency code: ';
 
 // Error
-$_['error_head'] = 'Error! ';
-$_['error_code'] = 'Error Code: ';
-$_['error_message'] = 'Error Message: ';
-$_['error_request'] = 'در ارتباط با درگاه پرداخت زیبال خطایی رخ داده است.';
-$_['error_verify'] = 'در ارتباط با درگاه پرداخت زیبال و یا تایید تراکنش خطایی رخ داده است.';
-$_['error_payment'] = 'تراكنش ناموفق می باشد و یا توسط پرداخت کننده کنسل شده است.';
-$_['error_data'] = 'اطلاعات ارسال شده مربوط به تایید تراکنش ناقص و یا غیر معتبر است.';
-$_['error_invoice'] = 'شماره سفارش با شماره فاکتور پرداخت شده مطابقت ندارد.';
-$_['error_amount'] = 'رقم تراکنش با رقم پرداخت شده مطابقت ندارد.';
-$_['error_curl'] = 'تابع cURL برای اتصال به درگاه پرداخت زیبال در سرور شما فعال نمی باشد. برای فعال کردن این تابع با مدیر سرور خود تماس بگیرید.';
-$_['error_undefined'] = 'امکان برقراری ارتباط به وب سرویس درگاه پرداخت زیبال در این لحظه وجود ندارد و یا پاسخ دریافتی غیر معتبر است.';
-$_['error_order_id']	 = 'شماره سفارش پیدا نشد !';
-$_['error_order_id']	 = 'شماره سفارش پیدا نشد !';
-$_['error_verify'] 		 	= 'اعتبارسنجی تراکنش ناموفق بود';
-$_['error_cant_connect']	= 'مشکلی در اتصال به درگاه زیبال پیش آمده است!<br>'.
-								'لطفا مجددا امتحان کنید.<br>'.
-								'در صورت رفع نشدن مشکل به پشتیبانی زیبال اطلاع دهید.';
-$_['error_connect_verify'] 	= 'مشکلی در اعتبارسنجی پرداخت پیش آمد!<br>'.
-								'لطفا مجددا امتحان کنید.<br>'.
-								'در صورت رفع نشدن مشکل به پشتیبانی زیبال اطلاع دهید.';
-// $_['error_status_-1'] 		= "اطلاعات ارسالی ناقص می باشند";
-$_['error_status_undefined']= "خطای نامشخص";
+$_['error_amount']              = 'The paid amount does not match the transaction amount.';
+$_['error_order_id']            = 'Order not found!';
+$_['error_verify']              = 'Transaction verification failed.';
+$_['error_cant_connect']        = 'There was a problem connecting to the Zibal gateway!<br>'.
+                                  'Please try again.<br>'.
+                                  'If the problem persists, contact Zibal support.';
+$_['error_connect_verify']      = 'There was a problem verifying the payment!<br>'.
+                                  'Please try again.<br>'.
+                                  'If the problem persists, contact Zibal support.';
+$_['error_currency']            = 'The Zibal gateway only works with Rial or Toman.';
+$_['error_transaction']         = 'No such transaction is registered for this store.';
+$_['error_order_processed']     = 'This order has already been processed and was left unchanged.';
+$_['error_status_undefined']    = 'Unknown error';
 
 // Button
-$_['button_view_cart']	 = 'مشاهده سبد خرید';
-$_['button_complete']    = 'تکمیل پرداخت';
-?>
+$_['button_view_cart']          = 'View Cart';

@@ -1,48 +1,28 @@
 <?php
 // Heading
-$_['heading_title']       = '<b style="color:#f62828;">Zibal Payement gateway</b>';
-$_['doc_title']       	  = 'Zibal';
+$_['heading_title']       = 'Zibal Payment Gateway';
+$_['doc_title']           = 'Zibal';
 
-// Text 
-
-$_['text_payment']        = 'Payment';
-$_['text_extension']   	  = 'extensions';
-$_['text_success']        = 'Success!';
-$_['text_zibal']  	      = '<a href="https://zibal.ir" target="_blank"><img src="view/image/payment/zibal.png" alt="zibal.ir" title="zibal.ir" style="border:1px solid #eee;" /></a>';
-$_['text_edit']           = 'ویرایش تنظیمات درگاه پرداخت زیبال';
-$_['text_support']        = 'Support';
-// $_['text_support_title']  = '';
+// Text
+$_['text_extension']      = 'Extensions';
+$_['text_success']        = 'Success: You have modified the Zibal payment gateway settings!';
+$_['text_zibal']          = '<a href="https://zibal.ir" target="_blank"><img src="view/image/payment/zibal.png" alt="zibal.ir" title="zibal.ir" style="border:1px solid #eee;" /></a>';
+$_['text_edit']           = 'Edit Zibal Payment Gateway';
 
 // Entry
-$_['entry_api'] = 'کلید API دریافتی';
-$_['entry_send'] = 'آدرس ارسال داده ها';
-$_['entry_verify'] = 'آدرس تایید تراکنش';
-$_['entry_gateway'] = 'آدرس انتقال به صفحه پرداخت';
-$_['entry_merchant_id'] = 'Merchant ID';
-$_['entry_zibal_direct'] = 'Zibal Direct';
+$_['entry_merchant_id']   = 'Merchant ID';
+$_['entry_zibal_direct']  = 'Zibal Direct';
+$_['entry_order_status']  = 'Order Status';
+$_['entry_status']        = 'Status';
+$_['entry_sort_order']    = 'Sort Order';
 
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_status'] = 'Starus:';
-$_['entry_sort_order'] = 'Order';
-
-
-// $_['entry_pin']   		  = 'کد دروازه پرداخت';
-// $_['entry_host_type']     = 'نوع هاست';
-// $_['entry_order_status']  = 'وضعیت سفارش';
-// $_['entry_status']        = 'وضعیت';
-// $_['entry_sort_order']    = 'ترتیب';
-
+// Help
+$_['help_merchant']       = 'Enter zibal to test the gateway.';
 
 // Tab
-$_['tab_general'] = 'عمومی';
-$_['tab_additional'] = 'اضافی';
+$_['tab_general']         = 'General';
 
 // Error
-$_['error_permission'] = 'شما سطح دسترسی لازم برای ویرایش ماژول را ندارید.';
-$_['error_validate'] = 'متاسفانه خطایی در مقدار دهی فیلد ها رخ داده است.';
-$_['error_api'] = 'مقدار دهی فیلد کلید API الزامی است.';
-$_['error_send'] = 'مقدار دهی فیلد آدرس ارسال داده ها الزامی است.';
-$_['error_verify'] = 'مقدار دهی فیلد آدرس تایید تراکنش الزامی است.';
-$_['error_gateway'] = 'مقدار دهی فیلد آدرس انتقال به صفحه پرداخت الزامی است.';
-$_['error_merchant'] = 'مقدار دهی فیلد شماره پذیرنده الزامی است.';
-?>
+$_['error_permission']    = 'Warning: You do not have permission to modify the Zibal payment gateway!';
+$_['error_validate']      = 'Warning: Please check the form carefully for errors!';
+$_['error_merchant']      = 'Merchant ID is required!';

@@ -33,6 +33,7 @@ class ControllerExtensionPaymentZibal extends Controller {
 
 		$data['entry_merchant_id'] = $this->language->get('entry_merchant_id');
 		$data['entry_zibal_direct'] = $this->language->get('entry_zibal_direct');
+		$data['help_merchant'] = $this->language->get('help_merchant');
 
 		//new???
 		// $data['text_host_iran'] = $this->language->get('text_host_iran');
@@ -50,7 +51,6 @@ class ControllerExtensionPaymentZibal extends Controller {
 		$data['button_cancel'] = $this->language->get('button_cancel');
 
 		$data['tab_general'] = $this->language->get('tab_general');
-      	$data['tab_additional'] = $this->language->get('tab_additional');
 
 		// if (isset($this->error['warning'])) {
 		// 	$data['error_warning'] = $this->error['warning'];
