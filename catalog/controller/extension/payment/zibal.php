@@ -1,6 +1,9 @@
 <?php
 
 class ControllerExtensionPaymentZibal extends Controller {
+	// Sent in the User-Agent so gateway logs can count installs per plugin version.
+	const PLUGIN_VERSION = '1.0.0';
+
 	public function index() {
 		$this->load->language('extension/payment/zibal');
 		
@@ -11,6 +14,12 @@ class ControllerExtensionPaymentZibal extends Controller {
     	$data['button_confirm'] = $this->language->get('button_confirm');
 
 		return $this->load->view('extension/payment/zibal', $data);
+	}
+
+	private function get_user_agent() {
+		$opencart_version = defined('VERSION') ? VERSION : 'unknown';
+
+		return 'ZibalOpenCart/' . self::PLUGIN_VERSION . ' OpenCart/' . $opencart_version . ' PHP/' . PHP_VERSION;
 	}
 
 	private function post_to_zibal($url, $data = false) {
@@ -37,6 +46,7 @@ class ControllerExtensionPaymentZibal extends Controller {
 
 		curl_setopt($ch, CURLOPT_URL, "https://gateway.zibal.ir/v1/".$url);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json; charset=utf-8'));
+		curl_setopt($ch, CURLOPT_USERAGENT, $this->get_user_agent());
 		curl_setopt($ch, CURLOPT_POST, 1);
 		if ($data) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
